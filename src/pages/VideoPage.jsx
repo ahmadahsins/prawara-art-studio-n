@@ -8,11 +8,9 @@ import { useEffect } from "react";
 const cardVariants = {
     offscreen: {
         opacity: 0,
-        y: 200
     },
     onscreen: {
         opacity: 1,
-        y: 0,
     transition: {
         type: "spring",
         duration: 2
