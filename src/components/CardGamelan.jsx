@@ -20,7 +20,7 @@ const CardGamelan = ( { title, url, text }) => {
     return (
         <div className="h-screen flex flex-col justify-center items-center gap-1 md:gap-10 pt-36 pb-20 md:py-20">
             <motion.div className="lg:h-[80vh] flex justify-center items-center mb-20 lg:mb-0" variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ once: true }}>
-                <div className="flex flex-col gap-3 w-[80%] shadow-xl px-12 py-10 bg-slate-100">
+                <div className="flex flex-col gap-3 w-[80%] shadow-xl px-6 md:px-12 py-10 mx-2 bg-slate-100">
                     <h1 className="text-xl lg:text-2xl text-yellow-600 font-semibold">{title}</h1>
                     <div className="flex flex-col lg:flex-row gap-5 w-full">
                         <div className="">
@@ -32,7 +32,7 @@ const CardGamelan = ( { title, url, text }) => {
                     </div>
                 </div>
             </motion.div>
-            <motion.button className="bg-black text-white normal-case font-extralight px-3 py-2 rounded-md" whileHover={{ scale: 1.025, color: "goldenrod" }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+            <motion.button className="bg-black text-white normal-case font-extralight px-3 py-2 rounded-md shadow-lg" whileHover={{ scale: 1.025, color: "goldenrod" }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                 <Link to={'/video'}>Lihat jenis gamelan lainnya</Link>
             </motion.button>                       
         </div>
