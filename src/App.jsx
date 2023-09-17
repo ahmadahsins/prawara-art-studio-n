@@ -8,9 +8,10 @@ import CardWorks from "./components/CardWorks";
 import ToTop from "./components/ToTop"
 import BoardGame from "./components/BoardGame";
 import VideoPage from "./pages/VideoPage";
-
-import { cardWorks2d, cardWorks3d, cardWorksGambar, textBoardGame } from "./constants";
+import CardGamelan from "./components/CardGamelan";
 import { useState } from "react";
+
+import { cardWorks2d, cardWorks3d, cardWorksGambar, textBoardGame, videoGamelan } from "./constants"; 
 
 const App = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -38,8 +39,12 @@ const App = () => {
             <Route path="gambar" element={<CardWorks cardWorks={cardWorksGambar}  />} />
             <Route path="board-game" element={<BoardGame title={textBoardGame.title} text={textBoardGame.text} text2={textBoardGame.text2} imageUrl={textBoardGame.imageUrl} />} />
           </Route>
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/video" element={<VideoPage />} />
+          <Route path="/contact" element={<ContactPage />}/>
+          <Route path="/video" element={<VideoPage videoGamelan={videoGamelan} />} >
+            {videoGamelan.map((video, index) => (
+              <Route key={index} path={video.title} element={<CardGamelan title={video.title} url={video.url} text={video.text} />} />
+            ))}
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

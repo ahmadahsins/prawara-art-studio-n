@@ -71,7 +71,7 @@ import boardGame3 from './photo/DSC06048.jpg';
 import packaging1 from './photo/Packaging Front.1 EDIT.png';
 import packaging2 from './photo/PackagingBackEDIT.png';
 import bonang from './videos/bonangVideo.mp4';
-import gong from './videos/gongVideo.mp4';
+import gong from './videos/gongVideo (1) (1).mp4';
 import kendang from './videos/kendangVideo.mp4';
 import kenong from './videos/kenongVideo.mp4';
 import saron from './videos/saronVideo.mp4';
